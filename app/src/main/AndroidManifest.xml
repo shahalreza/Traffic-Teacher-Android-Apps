@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.afrin.trafficteacher">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.afrin.trafficteacher.All_Details"></activity>
+        <activity android:name="com.example.afrin.trafficteacher.Vehicle_reg_classification" />
+        <activity android:name="com.example.afrin.trafficteacher.Vehicle_reg" />
+        <activity android:name="com.example.afrin.trafficteacher.Driving_license" />
+        <activity android:name="com.example.afrin.trafficteacher.New_rule" />
+        <activity android:name="com.example.afrin.trafficteacher.Dhara_rule" />
+        <activity android:name="com.example.afrin.trafficteacher.Fine" />
+        <activity android:name="com.example.afrin.trafficteacher.TrafficRule" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <activity android:name="com.example.afrin.trafficteacher.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.afrin.trafficteacher.TrafficSignSpeak" />
+        <activity android:name="com.example.afrin.trafficteacher.TrafficSignClassification" />
+        <activity android:name="com.example.afrin.trafficteacher.TrafficSignNoSpeak" />
+        <activity android:name="com.example.afrin.trafficteacher.TrafficSignAlert" />
+        <activity
+            android:name="com.example.afrin.trafficteacher.ShowTrafficMap"
+            android:label="@string/title_activity_show_traffic_map" />
+    </application>
+
+</manifest>
