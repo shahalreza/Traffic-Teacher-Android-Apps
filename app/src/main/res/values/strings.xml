@@ -5,7 +5,6 @@
     <string name="fine1">
       <font fgcolor="#FF9800">ধারা ১৩৭</font>
         \nসাধারন জরিমানা –২০০ টাকা
-
     </string>
     <string name="fine2">
      <font fgcolor="#FF9800">ধারা ১৩৯</font>
@@ -414,7 +413,6 @@
 \n১৭। মোটরযান পরিদর্শক কর্তৃক গাড়িটির পরিদর্শন প্রতিবেদন;
 
     </string>
-
 
 
     <string name="mr2_title"><font fgcolor="#FF9800"><b>রিকন্ডিশন মোটরযানের নিবন্ধন</b></font></string>
