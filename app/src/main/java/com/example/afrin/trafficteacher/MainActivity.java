@@ -8,13 +8,19 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView cardView1, cardView2, cardView4, cardView5, cardView6, cardViewMap, cardViewAllRoute;
+    private CardView cardView1, cardView2, cardView4, cardView5, cardView6, cardViewMap, cardViewAllRoute,
+            cardView_quiz;
+    DBConnection dbConnection;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dbConnection = new DBConnection(getApplicationContext());
+
+        dbConnection.createDataBase();
+        dbConnection.openDataBase();
 
         cardView1 = findViewById(R.id.cardView1);
         cardView2 = findViewById(R.id.cardView2);
@@ -23,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cardView6 = findViewById(R.id.cardView6);
         cardViewMap = findViewById(R.id.cardViewMap);
         cardViewAllRoute = findViewById(R.id.cardView_all_route);
+        cardView_quiz = findViewById(R.id.cardView_quiz);
 
         cardView1.setOnClickListener(this);
         cardView2.setOnClickListener(this);
@@ -31,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cardView6.setOnClickListener(this);
         cardViewMap.setOnClickListener(this);
         cardViewAllRoute.setOnClickListener(this);
+        cardView_quiz.setOnClickListener(this);
 
     }
 
@@ -60,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.cardView_all_route:
                 startActivity(new Intent(this, AllRouteInfo.class));
                 break;
+            case R.id.cardView_quiz:
+                startActivity(new Intent(this, ChooseQuiz.class));
+                break;
+
 
         }
     }
