@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".QuizActivityImage"></activity>
+        <activity android:name=".AllGarageInfo"></activity>
+        <activity android:name=".QuizActivityImage" />
         <activity android:name=".StartQuiz" />
         <activity android:name=".ChooseQuiz" />
         <activity android:name=".QuizActivity" />
