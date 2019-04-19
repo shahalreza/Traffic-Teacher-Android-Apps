@@ -20,7 +20,7 @@ import java.util.Locale;
 
 public class QuizActivity extends AppCompatActivity {
 
-    public static final String EXTRA_SCORE = "extraScore";
+    public static final String EXTRA_SCORE_NORMAL = "extraScoreNormal";
     private static final long COUNTDOWN_IN_MILLIS = 30000;
 
     private TextView textViewQuestion;
@@ -212,7 +212,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private void finishQuiz() {
         Intent resultIntent = new Intent();
-        resultIntent.putExtra(EXTRA_SCORE, score);
+        resultIntent.putExtra(EXTRA_SCORE_NORMAL, score);
         setResult(RESULT_OK, resultIntent);
         finish();
     }

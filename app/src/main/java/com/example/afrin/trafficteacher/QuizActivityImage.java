@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class QuizActivityImage extends AppCompatActivity {
-    public static final String EXTRA_SCORE = "extraScore";
+    public static final String EXTRA_SCORE_IMAGE = "extraScoreImage";
     private static final long COUNTDOWN_IN_MILLIS = 30000;
 
     //private TextView textViewQuestion;
@@ -210,7 +210,7 @@ public class QuizActivityImage extends AppCompatActivity {
 
     private void finishQuiz() {
         Intent resultIntent = new Intent();
-        resultIntent.putExtra(EXTRA_SCORE, score);
+        resultIntent.putExtra(EXTRA_SCORE_IMAGE, score);
         setResult(RESULT_OK, resultIntent);
         finish();
     }

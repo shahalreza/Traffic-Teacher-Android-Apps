@@ -598,4 +598,11 @@
 \n৮। অনুমিত আয়কর জমার রশিদ এর সত্যায়িত ফটোকপি।
     </string>
 
+    <string name="normal_quiz">
+        সাধারণ কুইজ
+    </string>
+    <string name="image_quiz">
+        ছবির কুইজ
+    </string>
+
 </resources>
