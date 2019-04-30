@@ -18,7 +18,7 @@ public class StartQuiz extends AppCompatActivity {
     public static final String KEY_HIGHSCORE_NORMAL = "keyHighscoreNormal";
     public static final String KEY_HIGHSCORE_IMAGE = "keyHighscoreImage";
 
-    private TextView textViewHighscore, textViewQuizTitle;
+    private TextView textViewYourscore, textViewHighscore, textViewQuizTitle;
 
     private int highscore;
     String quiz_type;
@@ -32,6 +32,7 @@ public class StartQuiz extends AppCompatActivity {
 
         textViewHighscore = findViewById(R.id.text_view_highscore);
         textViewQuizTitle = findViewById(R.id.text_view_quiz_title);
+        textViewYourscore = findViewById(R.id.text_view_yourscore);
 
         if(quiz_type.equals("normal")){
             textViewQuizTitle.setText(R.string.normal_quiz);
@@ -69,6 +70,7 @@ public class StartQuiz extends AppCompatActivity {
         if (requestCode == REQUEST_CODE_QUIZ_NORMAL) {
             if (resultCode == RESULT_OK) {
                 int score = data.getIntExtra(QuizActivity.EXTRA_SCORE_NORMAL, 0);
+                textViewYourscore.setText("Your Score: "+score);
                 if (score > highscore) {
                     updateHighscore(score);
                 }
@@ -76,6 +78,7 @@ public class StartQuiz extends AppCompatActivity {
         }else if (requestCode == REQUEST_CODE_QUIZ_IMAGE) {
             if (resultCode == RESULT_OK) {
                 int score = data.getIntExtra(QuizActivityImage.EXTRA_SCORE_IMAGE, 0);
+                textViewYourscore.setText("Your Score: "+score);
                 if (score > highscore) {
                     updateHighscore(score);
                 }
